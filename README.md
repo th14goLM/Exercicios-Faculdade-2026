@@ -1,2 +1,17 @@
-# Exercicios-Faculdade-2026
-Repositório para armazenagem de exercícios de treino e feitos em sala
+📚 Exercícios da Faculdade
+
+Repositório dedicado aos exercícios desenvolvidos durante minha graduação, com foco em prática de programação, lógica e conceitos fundamentais da área de TI.
+
+## 🚀 Objetivo
+
+Este repositório tem como objetivo:
+
+- Consolidar o aprendizado em programação
+- Organizar exercícios por matéria/tema
+- Servir como portfólio acadêmico
+- Facilitar revisões futuras
+
+## 🛠️ Tecnologias Utilizadas
+
+- Java ☕
+- C 🧑‍💻
