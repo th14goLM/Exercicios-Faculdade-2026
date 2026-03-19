@@ -1,0 +1,1 @@
+export type Status = "Em solo" | "Em órbita" | "Ativo" | "Falha";

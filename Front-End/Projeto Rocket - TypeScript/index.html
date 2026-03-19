@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centro de Controle Espacial</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+<header class="header">
+  <h1>🚀 Centro de Controle</h1>
+</header>
+
+<main class="container">
+
+  <section class="card">
+    <h2>Criar Foguete</h2>
+    <input type="text" id="nomeFoguete" placeholder="Nome do foguete">
+    <input type="number" id="combustivel" placeholder="Combustível">
+    <button id="criarFoguete">Criar Foguete</button>
+  </section>
+
+  <section class="card">
+    <h2>Criar Satélite</h2>
+    <input type="text" id="nomeSatelite" placeholder="Nome do satélite">
+    <input type="number" id="massa" placeholder="Massa">
+    <button id="criarSatelite">Criar Satélite</button>
+  </section>
+
+  <section class="card">
+    <h2>Missão</h2>
+    <button id="lancar">Lançar</button>
+  </section>
+
+  <section class="card">
+    <h2>Status</h2>
+    <pre id="output"></pre>
+  </section>
+
+</main>
+
+<!-- IMPORTANTE: JS compilado do TypeScript -->
+<script src="dist/main.js" type="module"></script>
+
+</body>
+</html>
