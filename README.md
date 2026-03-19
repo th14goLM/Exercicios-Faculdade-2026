@@ -13,5 +13,10 @@ Este repositório tem como objetivo:
 
 ## 🛠️ Tecnologias Utilizadas
 
-- Java ☕
-- C 🧑‍💻
+- Java 
+- C
+- Python
+- Html
+- Css
+- TypeScript
+- JavaScript
