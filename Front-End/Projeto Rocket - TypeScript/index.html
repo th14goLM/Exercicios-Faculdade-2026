@@ -1,53 +1,33 @@
-<!doctype html>
-<html lang="pt-br">
-
+<!DOCTYPE html>
+<html lang="pt">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Centro de Controle Espacial</title>
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/main.css">
+  <title>Controle de Missão Espacial</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+<div class="painel">
+  <h1>🚀 Mission Control Center</h1>
 
-<header class="header">
-  <h1>🚀 Centro de Controle</h1>
-</header>
+  <div class="secao">
+    <h3>Configurar Foguete</h3>
+    <input type="text" id="nomeFoguete" placeholder="Nome do Foguete">
+    <input type="number" id="combustivel" placeholder="Combustível (L)">
+    <button id="criarFoguete">Preparar Foguete</button>
+  </div>
 
-<main class="container">
+  <div class="secao">
+    <h3>Configurar Satélite</h3>
+    <input type="text" id="nomeSatelite" placeholder="Nome do Satélite">
+    <input type="number" id="massa" placeholder="Massa (kg)">
+    <button id="criarSatelite">Acoplar Satélite</button>
+  </div>
 
-  <section class="card">
-    <h2>Criar Foguete</h2>
-    <input type="text" id="nomeFoguete" placeholder="Nome do foguete">
-    <input type="number" id="combustivel" placeholder="Combustível">
-    <button id="criarFoguete">Criar Foguete</button>
-  </section>
+  <button id="lancar" class="btn-lancar">IGNIÇÃO / LANÇAR</button>
 
-  <section class="card">
-    <h2>Criar Satélite</h2>
-    <input type="text" id="nomeSatelite" placeholder="Nome do satélite">
-    <input type="number" id="massa" placeholder="Massa">
-    <button id="criarSatelite">Criar Satélite</button>
-  </section>
+  <h3>Status da Missão</h3>
+  <pre id="output">Aguardando comandos...</pre>
+</div>
 
-  <section class="card">
-    <h2>Missão</h2>
-    <button id="lancar">Lançar</button>
-  </section>
-
-  <section class="card">
-    <h2>Status</h2>
-    <pre id="output"></pre>
-  </section>
-
-</main>
-
-<!-- IMPORTANTE: JS compilado do TypeScript -->
-<script src="dist/main.js" type="module"></script>
-
-</body>
+<script src="dist/main.js"></script> </body>
 </html>
