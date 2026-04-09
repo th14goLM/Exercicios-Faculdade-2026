@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+}
+
+body {
+    height: 200vh;
+    width: 200vw;
+}
+
+.input{
+    border: 1px solid black;
+}
+
+.input:disabled{
+    border-color: red;
+}
+
+.input::after{
+    content: "+";
+}
