@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+}
+
+.minhaDiv {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    background-color: black;
+    padding: 10px;
+}
+
+.bloco {
+    height: 100px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+@media(min-width: 480px) {
+    /*.minhaDiv{*/
+    /*    background-color: red;*/
+    /*}*/
+
+    .minhaDiv{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(min-width: 768px) {
+    /*.minhaDiv{*/
+    /*    background-color: yellow;*/
+    /*}*/
+
+    .minhaDiv{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media(min-width: 1080px) {
+    /*.minhaDiv{*/
+    /*    background-color: green;*/
+    /*}*/
+
+    .minhaDiv{
+        grid-template-columns: repeat(6, 1fr);
+    }
+}

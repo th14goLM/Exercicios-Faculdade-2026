@@ -23,14 +23,14 @@
     /*align-items: center;*/
 
     /*display: grid;*/
-    /*/ * grid-template-columns: 3fr 3fr 3fr;*/
+    /* grid-template-columns: 3fr 3fr 3fr;*/
     /*grid-template-columns: 20% 20% 60%;*/
     /*grid-template-columns: repeat(2, 3fr);*/
     /*grid-template-rows: repeat(3, 3fr);*/
     /*grid-column-gap: 10%;*/
     /*row-gap: 10%;*/
     /*grid-gap: 10%;*/
-}
+
 
 .caixa{
     width: 50%;
@@ -39,8 +39,4 @@
     border: 2px solid red;
 }
 
-/*inline*/
-/*inline block*/
-/*block*/
-/*none*/
 
