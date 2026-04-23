@@ -193,14 +193,6 @@ footer{
         text-align: center;
         gap: 15px;
     }
-    .Noticias{
-        flex-direction: row;
-        align-items: center;
-    }
-    .card-noticia{
-        width: 100%;
-        max-width: 100%;
-    }
 }
 
 @keyframes animacao {
