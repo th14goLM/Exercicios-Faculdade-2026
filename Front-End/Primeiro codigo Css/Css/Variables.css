@@ -1,5 +1,6 @@
 :root {
     --background: #272626;
-    --texto:rgba(100,180,255,.6);
+    --texto: rgba(100,180,255,.6);
     --rocket-gradient: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    --pure-white: #ffffff; /* Adicionei para contrastes */
 }
