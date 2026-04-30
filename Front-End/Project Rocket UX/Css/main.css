@@ -135,6 +135,7 @@ header {
     border-radius: var(--radius-lg);
     overflow: hidden;
     border: 1px solid var(--rocket-blue);
+    transition: transform var(--transition-fast);
 }
 
 /* Hover */
