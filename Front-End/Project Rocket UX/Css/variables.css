@@ -1,0 +1,11 @@
+:root {
+    --background: #0b0d17;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --header-bg: rgba(0, 20, 60, 0.8);
+    --rocket-blue: #64b4ff;
+    --rocket-gradient: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    --texto-principal: rgba(160, 210, 255, 0.9);
+    --pure-white: #ffffff;
+    --radius-lg: 20px;
+    --transition-fast: 0.3s ease;
+}

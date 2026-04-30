@@ -1,0 +1,263 @@
+/* Reset geral: remove estilos padrão do navegador */
+* {
+    text-decoration: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo global do body */
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: var(--background);
+    color: var(--texto-principal);
+    line-height: 1.6;
+}
+
+/* Centraliza conteúdo */
+.container{
+    text-align: center;
+}
+
+/* Cabeçalho fixo no topo */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 5%;
+    background: var(--header-bg);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(100, 180, 255, 0.2);
+}
+
+/* Logo */
+.logo {
+    width: 60px;
+    height: 60px;
+    border: 2px solid var(--rocket-blue);
+    border-radius: 50%;
+    transition: transform var(--transition-fast);
+}
+
+/* Título do header */
+.header-title h1 {
+    padding-left: 6rem;
+    font-size: 1.4rem;
+    color: var(--rocket-blue);
+    letter-spacing: 2px;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+/* Menu de navegação */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+/* Links do menu */
+.menu a {
+    color: var(--pure-white);
+    font-weight: 600;
+    transition: var(--transition-fast);
+}
+
+/* Efeito ao passar o mouse */
+.menu a:hover {
+    color: var(--rocket-blue);
+    text-shadow: 0 0 10px var(--rocket-blue);
+}
+
+/* ================= NOTÍCIAS ================= */
+
+/* Container dos cards */
+.Noticias {
+    display: flex;
+    flex-wrap: wrap; /* quebra linha se necessário */
+    gap: 20px;
+    justify-content: center;
+    padding: 2rem;
+}
+
+/* Título */
+.titulo-noticia{
+    text-align: center;
+}
+
+/* Card individual */
+.card-noticia {
+    flex: 1 1 300px;
+    max-width: 400px;
+    background: var(--card-bg);
+    border: 1px solid rgba(100, 180, 255, 0.1);
+    border-radius: var(--radius-lg);
+    padding: 15px;
+    transition: transform var(--transition-fast);
+}
+
+/* Hover do card */
+.card-noticia:hover {
+    transform: translateY(-5px);
+    background: var(--rocket-gradient);
+}
+
+/* Imagem do card */
+.card-noticia img {
+    width: 100%;
+    border-radius: 15px;
+    animation: animacao 1.2s ease-out forwards;
+}
+
+/* ================= TRIPULAÇÃO ================= */
+
+/* Grid responsivo */
+.tripulantes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 2rem 5%;
+}
+
+/* Título */
+.titulo-tripulacao{
+    text-align: center;
+}
+
+/* Card do tripulante */
+.tripulante-card {
+    position: relative;
+    min-width: 400px;
+    max-width: 450px;
+    height: 450px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--rocket-blue);
+}
+
+/* Hover */
+.tripulante-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 180, 255, 0.3);
+    border-color: var(--pure-white);
+    object-fit: cover;
+}
+
+/* Imagem */
+.tripulante-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-fast);
+    animation: animacao 1.2s ease-out forwards;
+}
+
+/* Informações sobrepostas */
+.info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    text-align: center;
+}
+
+/* ================= LANÇAMENTO ================= */
+
+.Lancamento{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+/* Container do contador */
+#countdown-container {
+    background: rgba(100, 180, 255, 0.05);
+    border: 1px solid var(--rocket-blue);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Timer */
+#timer {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: clamp(1.2rem, 5vw, 2.8rem); /* responsivo */
+    color: var(--pure-white);
+    margin-top: 10px;
+    letter-spacing: 2px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    text-shadow: 0 0 15px rgba(100, 180, 255, 0.5);
+}
+
+/* ================= MODAL ================= */
+
+/* Fundo do modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    backdrop-filter: blur(10px);
+}
+
+/* Conteúdo do modal */
+.modal-content {
+    background: var(--background);
+    margin: 10% auto;
+    padding: 30px;
+    border: 1px solid var(--rocket-blue);
+    width: 80%;
+    max-width: 600px;
+    border-radius: 20px;
+    position: relative;
+}
+
+/* Botão de fechar */
+.close-button {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 30px;
+    color: var(--rocket-blue);
+    cursor: pointer;
+}
+
+/* ================= RODAPÉ ================= */
+
+footer {
+    padding: 3rem;
+    text-align: center;
+    background: #05070a;
+    border-top: 1px solid var(--rocket-blue);
+}
+
+/* ================= RESPONSIVO ================= */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* empilha itens */
+        gap: 1rem;
+    }
+}
+
+/* ================= ANIMAÇÃO ================= */
+
+@keyframes animacao {
+    from { opacity: 0; transform: scale(0.95); } /* começa menor e invisível */
+    to { opacity: 1; transform: scale(1); } /* termina normal */
+}
