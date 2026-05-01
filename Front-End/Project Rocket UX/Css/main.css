@@ -71,6 +71,52 @@ header {
     text-shadow: 0 0 10px var(--rocket-blue);
 }
 
+/* ================= NASA APOD ================= */
+#apod-container {
+    max-width: 800px;
+    margin: 20px auto;
+    overflow: hidden; /* Garante que a imagem respeite o border-radius do card */
+}
+
+#apod-loading {
+    padding: 40px;
+    font-family: 'Share Tech Mono', monospace;
+    color: var(--rocket-blue);
+}
+
+#apod-img {
+    display: none; /* JS mudará para 'block' após carregar */
+    width: 100%;
+    border-radius: 15px;
+    transition: var(--transition-fast);
+}
+
+#apod-content {
+    display: none; /* JS mudará para 'block' após carregar */
+    padding: 25px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 0 0 15px 15px;
+}
+
+#apod-title {
+    color: var(--rocket-blue);
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+#apod-explanation {
+    text-align: justify;
+    font-size: 0.95rem;
+    color: var(--texto-principal);
+    line-height: 1.6;
+}
+
+/* Ajuste para o hover não ficar muito forte na seção da NASA */
+#apod-container:hover {
+    transform: scale(1.01);
+}
+
+
 /* ================= NOTÍCIAS ================= */
 
 /* Container dos cards */
@@ -182,6 +228,7 @@ header {
     padding: 2rem;
     text-align: center;
     backdrop-filter: blur(5px);
+    height: auto;
     width: 90%;
     max-width: 800px;
     margin: 0 auto;
@@ -245,6 +292,19 @@ footer {
     text-align: center;
     background: #05070a;
     border-top: 1px solid var(--rocket-blue);
+}
+
+/* ================= JAVASCRIPT ================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal-active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* ================= RESPONSIVO ================= */

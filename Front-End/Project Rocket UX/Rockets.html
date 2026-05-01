@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nasa - Projeto Rockets</title>
-    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" media="print" onload="this.media='all'">
 
     <link rel="stylesheet" href="Css/variables.css">
     <link rel="stylesheet" href="Css/main.css">
@@ -34,17 +36,33 @@
         <h2>Bem-vindos ao site da Rockets</h2>
     </section>
 
+    <!-- ================= DADOS NASA ================= -->
+    <section id="nasa-section" class="container reveal">
+        <h2 class="titulo-noticia">Foto Astronômica do Dia</h2>
+
+        <div id="apod-container" class="card-noticia">
+            <div id="apod-loading">Carregando dados da NASA...</div>
+
+            <img id="apod-img" src="" alt="NASA APOD">
+
+            <div id="apod-content">
+                <h3 id="apod-title"></h3>
+                <p id="apod-explanation"></p>
+            </div>
+        </div>
+    </section>
+
     <!-- ================= NOTÍCIAS ================= -->
     <section class="secao-noticias">
-        <h2 class="titulo-noticia">Notícias</h2>
+        <h2 class="titulo-noticia reveal">Notícias</h2>
 
         <div class="Noticias">
-            <article class="card-noticia">
+            <article class="card-noticia reveal">
                 <img src="Assets/Artemis.png" alt="Missão Artemis II">
                 <p>A missão Artemis II obteve resultados significativos.</p>
             </article>
 
-            <article class="card-noticia">
+            <article class="card-noticia reveal">
                 <img src="Assets/RocketIA.png" alt="IA em Foguetes">
                 <p>Missões espaciais têm tido melhorias constantes com a introdução da IA.</p>
             </article>
@@ -57,66 +75,61 @@
         <h2 class="titulo-tripulacao">Tripulantes Artemis II</h2>
         <div class="tripulantes">
 
-            <article class="tripulante-card">
-                <img src="Assets/astronauta%201.png" alt="Foto do Comandante Reid Wiseman">
+        <div class="tripulantes">
+            <article class="tripulante-card reveal" data-name="Reid Wiseman">
+                <img src="Assets/astronauta%201.png" alt="Comandante Reid Wiseman" />
                 <div class="info">
                     <h3>Reid Wiseman</h3>
                     <p>Comandante</p>
                 </div>
             </article>
-
-            <article class="tripulante-card">
-                <img src="Assets/astronauta%202.png" alt="Foto da Especialista Christina Koch">
+            <article class="tripulante-card reveal" data-name="Christina Koch">
+                <img src="Assets/astronauta%202.png" alt="Especialista Christina Koch" />
                 <div class="info">
                     <h3>Christina Koch</h3>
                     <p>Especialista em Missão</p>
                 </div>
             </article>
-
-            <article class="tripulante-card">
-                <img src="Assets/astronauta%203.png" alt="Foto do Especialista Jeremy Hansen">
+            <article class="tripulante-card reveal" data-name="Jeremy Hansen">
+                <img src="Assets/astronauta%203.png" alt="Especialista Jeremy Hansen" />
                 <div class="info">
                     <h3>Jeremy Hansen</h3>
                     <p>Especialista em Missão</p>
                 </div>
             </article>
-
-            <article class="tripulante-card">
-                <img src="Assets/astronauta%204.png" alt="Foto do Piloto Victor Glover">
+            <article class="tripulante-card reveal" data-name="Victor Glover">
+                <img src="Assets/astronauta%204.png" alt="Piloto Victor Glover" />
                 <div class="info">
                     <h3>Victor Glover</h3>
                     <p>Piloto</p>
                 </div>
             </article>
-
+            </div>
         </div>
     </section>
 
     <!-- ================= MODAL ================= -->
-    <!-- Janela que aparece ao clicar em algo (JS controla isso) -->
-    <div id="crew-modal" class="modal">
+    <div id="crew-modal" class="modal" role="dialog" aria-modal="true">
         <div class="modal-content">
-            <span class="close-button">&times;</span>
+            <span class="close-button" aria-label="Fechar">&times;</span>
+            <p class="modal-role">// Tripulante</p>
             <h2 id="modal-name"></h2>
-            <p id="modal-bio" style="margin-top:20px;"></p>
-
+            <p id="modal-bio"></p>
         </div>
     </div>
 
     <!-- ================= CONTADOR ================= -->
-    <section class="Lancamento">
+    <section class="Lancament reveal">
         <div id="countdown-container">
             <p>LANÇAMENTO DA MISSÃO 2026 EM:</p>
             <div id="timer">
-                <span id="days">00</span>d :
-                <span id="hours">00</span>h :
-                <span id="minutes">00</span>m :
-                <span id="seconds">00</span>s
+                <span id="days">00</span>dias :
+                <span id="hours">00</span>horas :
+                <span id="minutes">00</span>minutos :
+                <span id="seconds">00</span>segundos
             </div>
-
         </div>
     </section>
-
 </main>
 
 <!-- ================= FOOTER ================= -->
